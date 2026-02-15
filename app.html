@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>家計簿</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Yomogi&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="container">
+    <h2>家計簿</h2>
+
+    <input id="date" type="date">
+    <input id="amount" type="number" placeholder="金額">
+
+    <select id="type">
+        <option value="income">収入</option>
+        <option value="expense">支出</option>
+    </select>
+
+    <input id="category" placeholder="カテゴリ">
+    <input id="memo" placeholder="メモ">
+
+    <button onclick="addData()">追加</button>
+
+    <h3>合計：<span id="total">0</span> 円</h3>
+
+    <h3>平均支出：<span id="avgExpense">0</span> 円</h3>
+
+    <h3>月別合計</h3>
+    <ul id="list"></ul>
+</div>
+
+<div class="chart-card">
+    <select id="yearSelect"></select>
+    <canvas id="chart"></canvas>
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+
+<script>
+const firebaseConfig = {
+    apiKey: "AIzaSyAzFsgAZQCwR4u095mrqJYgcooNpd-hVkA",
+    authDomain: "kakeibo-cloud-app.firebaseapp.com",
+    projectId: "kakeibo-cloud-app",
+    storageBucket: "kakeibo-cloud-app.firebasestorage.app",
+    messagingSenderId: "656401057632",
+    appId: "1:656401057632:web:05c396445d56ff81198005"
+};
+
+firebase.initializeApp(firebaseConfig);
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="kakeibo.js"></script>
+
+</body>
+</html>

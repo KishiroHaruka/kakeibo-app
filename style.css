@@ -1,0 +1,153 @@
+body {
+    font-family: "Yomogi", cursive;
+    margin: 0;
+    padding: 20px;
+    background-color: #fbfaf6;
+    background-image: repeating-linear-gradient(
+        to bottom,
+        transparent 0px,
+        transparent 28px,
+        #dcdcdc 29px
+    );
+}
+
+.container {
+    max-width: 420px;
+    margin: auto;
+    background: #fffdf7;
+    padding: 25px 20px 30px;
+    position: relative;
+    box-shadow: 
+        0 8px 15px rgba(0,0,0,0.08),
+        0 2px 5px rgba(0,0,0,0.05);
+    border-radius: 20px;
+}
+
+h1, h2, h3 {
+    text-align: center;
+    margin: 8px 0 15px;
+    letter-spacing: 0.05em;
+}
+
+input, select, button {
+    font-family: inherit;
+    width: 100%;
+    padding: 12px;
+    margin: 6px 0;
+    border-radius: 10px;
+    border: 1px dashed #cbbfa9;
+    background: #fffdf7;
+    font-size: 15px;
+    box-sizing: border-box;
+}
+
+button {
+    border-radius: 999px;
+    background: linear-gradient(135deg, #ffe0e0, #fff);
+    border: 2px dashed #e4b7b7;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    background: #ffffff;
+    margin: 6px 0;
+    padding: 8px 10px;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.income-item {
+    background: rgba(54,162,235,0.08);
+    border-left: 4px solid rgba(54,162,235,0.6);
+}
+
+.expense-item {
+    background: rgba(255,99,132,0.08);
+    border-left: 4px solid rgba(255,99,132,0.6);
+}
+
+.total-box {
+    margin-top: 15px;
+    padding: 12px;
+    border-radius: 10px;
+    background: #fff0f0;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.list-actions {
+    display: flex;
+    gap: 6px;
+    margin-top: 6px;
+}
+
+.list-btn {
+    font-family: inherit;
+    padding: 4px 10px;
+    font-size: 12px;
+    border-radius: 6px;
+    border: 1px dashed #e4b7b7;
+    background: #fff;
+    cursor: pointer;
+    width: auto;
+}
+
+.list-btn:hover {
+    background: #ffecec;
+}
+
+canvas {
+    max-width: 100%;
+    height: auto;
+}
+
+@media screen and (max-width: 768px) {
+
+    body {
+        padding: 12px;
+        font-size: 15px;
+    }
+
+    .container {
+        padding: 18px 14px 20px;
+        border-radius: 16px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    input, select, button {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    li {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .total-box {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .list-btn {
+        font-size: 12px;
+        padding: 4px 8px;
+    }
+}

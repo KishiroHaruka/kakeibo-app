@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ログイン | 家計簿</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+
+<body>
+    <div class="container">
+
+        <h2>家計簿 ログイン</h2>
+
+        <input id="email" type="email" placeholder="メール" autocomplete="email">
+        <input id="password" type="password" placeholder="パスワード" autocomplete="current-password">
+
+        <button onclick="login()">ログイン</button>
+        <button onclick="signup()">新規登録</button>
+
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyAzFsgAZQCwR4u095mrqJYgcooNpd-hVkA",
+            authDomain: "kakeibo-cloud-app.firebaseapp.com",
+            projectId: "kakeibo-cloud-app",
+            storageBucket: "kakeibo-cloud-app.firebasestorage.app",
+            messagingSenderId: "656401057632",
+            appId: "1:656401057632:web:05c396445d56ff81198005"
+        };
+
+        firebase.initializeApp(firebaseConfig);
+    </script>
+
+    <script src="login.js"></script>
+
+</body>
+</html>
